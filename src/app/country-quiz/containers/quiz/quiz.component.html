@@ -1,0 +1,29 @@
+<ng-container *ngIf="question">
+  <!-- display flag if there is a flag to show -->
+  <div *ngIf="question?.flag">
+    <img [src]="question.flag" alt="flag" srcset="">
+  </div>
+
+  <!-- display question text -->
+  <span class="quiz-question">{{ question?.text }}</span>
+
+  <!-- display quiz options -->
+  <section class="quiz-options">
+    <div class="option" *ngFor="let option of question.options; index as i" [class]="isCorrect(i)" (click)="selectAnswer(i)">
+      <span class="option-label">&nbsp;&nbsp;{{ letters[i] }}</span>
+      <span class="option-text">&nbsp;&nbsp;&nbsp;&nbsp;{{ option }}</span>
+      <ng-container *ngIf="selectedOption !== null">
+        <span class="material-icons" *ngIf="question.answer === i">check_circle_outline</span>
+        <span class="material-icons" *ngIf="selectedOption === i && (question.answer !== i)">highlight_off</span>
+      </ng-container>
+    </div>
+  </section>
+
+  <section class="quiz-paging">
+    <span class="quiz-badge">Question #{{ currentQuestionNumber }} of {{ totalQuestions }}</span>
+    <button (click)="nextQuestion()" [class.flag-next]="question?.flag" [disabled]="!isAnswered()">
+      <span *ngIf="currentQuestionNumber !== totalQuestions">Next &raquo;</span>
+      <span *ngIf="currentQuestionNumber === totalQuestions">View Results</span>
+    </button>
+  </section>
+</ng-container>

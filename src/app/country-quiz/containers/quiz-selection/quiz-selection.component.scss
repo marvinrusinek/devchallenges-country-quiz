@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+
+
+    .quiz-selection {
+      width: 450px;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        width: 400px;
+        margin-left: 200px;
+        font: 700 30px 'Poppins', sans-serif;
+      }
+
+      .buttons {
+        list-style-type: none;
+        margin-left: calc(20% - 35px);
+
+        button {
+          display: block;
+          width: 200px;
+          border-radius: 20px;
+          margin-left: 200px;
+          margin-bottom: 20px;
+          font: 700 24px 'Poppins', sans-serif;
+
+          &:hover {
+            background-color: $mountain-meadow;
+            cursor: pointer;
+          }
+        }
+      }
+    }

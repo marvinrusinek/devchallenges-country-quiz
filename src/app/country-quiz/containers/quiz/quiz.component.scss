@@ -1,0 +1,124 @@
+@import "../../styles/variables";
+
+img {
+  width: 84px;
+  height: 54px;
+  border-radius: 4px;
+  margin-top: -20px;
+  margin-left: 20px;
+}
+
+.quiz-question {
+  font: 700 24px 'Poppins', sans-serif;
+  color: $grayish-blue;
+  width: 450px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.quiz-options {
+  .option {
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    font: 500 18px 'Poppins', sans-serif;
+    border: 2px solid $indigo;
+    border-radius: 12px;
+    color: $indigo;
+    margin-top: 5px;
+    width: 430px;
+    margin-top: 15px;
+    margin-left: 10px;
+    word-wrap: break-word;
+  }
+
+  .option-active {
+    border: 2px solid rgba(96, 102, 208, .7);
+    color: rgb(96, 102, 208);
+    cursor: pointer;
+
+    &:active {
+      background-color: $bright-orange;
+    }
+
+    &:hover {
+      background-color: $light-orange;
+      border-color: $light-orange;
+      color: $white;
+    }
+  }
+
+  .option-inactive {
+    background-color: $white-smoke;
+    border: 2px solid rgba(96, 102, 208, .7);
+    color: rgb(96, 102, 208);
+  }
+
+  .option-correct {
+    background-color: $fountain-green;
+    border-color: $fountain-green;
+    color: $white;
+  }
+
+  .option-incorrect {
+    background-color: $light-coral;
+    border-color: $light-coral;
+    color: $white;
+  }
+
+  .option-label {
+    font: 500 24px 'Poppins', sans-serif;
+    text-transform: uppercase;
+  }
+
+  .option-text {
+    flex: 1;
+    padding-left: 16px;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  .material-icons {
+    font-size: 24px;
+    vertical-align: middle;
+  }
+}
+
+.quiz-paging {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  .quiz-badge {
+    color: $dark-gray2;
+    margin: 0 auto;
+    margin-top: 20px;
+    font: 700 18px 'Poppins', sans-serif;
+    font-style: italic;
+  }
+
+  button {
+    background-color: $light-orange;
+    width: auto;
+    height: 56px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(252, 168, 47, 0.4);
+
+    &:active {
+      background: $bright-orange;
+    }
+
+    span {
+      font: 700 18px 'Poppins', sans-serif;
+      color: $white;
+    }
+  }
+
+  .flag-next {
+    position: relative;
+    bottom: 0;
+    right: 25px;
+  }
+}

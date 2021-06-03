@@ -1,0 +1,70 @@
+@import "src/app/country-quiz/styles/variables";
+
+main {
+  background-image: url('../assets/images/background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: -150px;
+}
+
+mat-card {
+  width: 464px;
+  height: 515px;
+  background-color: $white;
+  border-radius: 24px;
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+
+  mat-card-header {
+    display: flex;
+    flex-direction: row;
+
+    .country-quiz-heading {
+      display: inline-grid;
+      grid-template-columns: 300px 1fr 100px;
+
+      h1 {
+        font: 700 36px "Poppins", sans-serif;
+        color: $very-light-gray;
+        text-transform: uppercase;
+        width: 271px;
+        height: 54px;
+        margin-top: -70px;
+        margin-left: -45px;
+        text-align: left;
+      }
+
+      .logo {
+        justify-self: end;
+        margin-right: -85px;
+        margin-top: -70px;
+
+        img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+  }
+
+  mat-card-content {
+    clear: both;
+    position: absolute;
+    top: 50px;
+
+    .selection {
+      width: auto;
+      margin-left: 300px;
+    }
+  }
+}

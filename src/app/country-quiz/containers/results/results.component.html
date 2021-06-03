@@ -1,0 +1,8 @@
+<section class="results">
+  <img class="result-image" src="assets/images/undraw_winners_ao2o%202.svg" />
+  <h1 class="result-title">Results</h1>
+  <p class="score-text">You got <span class="score-number">{{ correctAnswerCount }}</span> correct answers</p>
+  <button class="btn result-btn" (click)="tryAgain()" [routerLink]="['/select']">
+    <span>Try again</span>
+  </button>
+</section>

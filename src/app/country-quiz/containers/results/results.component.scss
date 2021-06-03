@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+
+.results {
+  text-align: center;
+
+  img {
+    width: 238px;
+    height: 129px;
+  }
+
+  .result-title {
+    color: $dark-blue2;
+  }
+
+  .result-text {
+    font: 700 40px 'Poppins', sans-serif;
+    color: $grayish-blue;
+  }
+
+  .score-text {
+    font: 400 16px 'Poppins', sans-serif;
+
+    .score-number {
+      font: 700 32px 'Poppins', sans-serif;
+      color: $fountain-green;
+    }
+  }
+
+  button {
+    display: grid;
+    width: 209px;
+    height: 62px;
+    border: 2px solid $dark-blue2;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 100px;
+    font: 600 18px 'Poppins', sans-serif;
+    color: $dark-blue2;
+    background-color: $white;
+    text-align: center;
+    align-self: center;
+
+    span {
+      margin-top: 15px;
+    }
+
+    &:active {
+      background-color: $whisper;
+    }
+  }
+}

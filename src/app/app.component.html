@@ -1,0 +1,23 @@
+<main>
+  <mat-card>
+    <mat-card-header>
+      <div class="country-quiz-heading">
+        <h1>Country Quiz</h1>
+
+        <div class="logo">
+          <img src="assets/images/undraw_adventure_4hum%201.svg" loading="lazy" alt="quiz logo" srcset="" />
+        </div>
+      </div>
+    </mat-card-header>
+
+    <mat-card-content>
+      <app-quiz (quizCompleted)="showResults($event)" *ngIf="displayComponent === 'QUIZ'"></app-quiz>
+      <app-results (startQuiz)="startQuiz()" *ngIf="displayComponent === 'RESULT'"
+                  [correctAnswerCount]="correctAnswerCount"></app-results>
+    </mat-card-content>
+  </mat-card>
+</main>
+
+<footer>
+  <app-footer></app-footer>
+</footer>

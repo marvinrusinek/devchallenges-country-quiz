@@ -9,6 +9,7 @@
   }
 
   .result-title {
+    font: 700 48px 'Poppins', sans-serif;
     color: $dark-blue2;
   }
 
@@ -19,6 +20,8 @@
 
   .score-text {
     font: 400 16px 'Poppins', sans-serif;
+    color: $dark-blue2;
+    margin-top: -20px;
 
     .score-number {
       font: 700 32px 'Poppins', sans-serif;
@@ -27,18 +30,15 @@
   }
 
   button {
-    display: grid;
     width: 209px;
     height: 62px;
     border: 2px solid $dark-blue2;
     border-radius: 12px;
     cursor: pointer;
-    margin-top: 100px;
+    margin-top: 80px;
     font: 600 18px 'Poppins', sans-serif;
     color: $dark-blue2;
     background-color: $white;
-    text-align: center;
-    align-self: center;
 
     span {
       margin-top: 15px;

@@ -46,21 +46,21 @@ export class QuizComponent implements OnInit {
   }
 
   isCorrect(optionIndex: number): string {
-    let classCSS: string;
+    let classStyle: string;
 
     if (this.selectedOption === null) {
-      classCSS = 'option-active';
+      classStyle = 'option-active';
     } else {
       if (optionIndex === this.question.answer) {
-        classCSS = 'option-correct';
+        classStyle = 'option-correct';
       } else if (optionIndex === this.selectedOption) {
-        classCSS = 'option-incorrect';
+        classStyle = 'option-incorrect';
       } else {
-        classCSS = 'option-inactive';
+        classStyle = 'option-inactive';
       }
     }
 
-    return classCSS;
+    return classStyle;
   }
 
   selectAnswer(optionIndex: number): void {

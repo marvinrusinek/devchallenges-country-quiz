@@ -21,16 +21,19 @@ export class QuestionService {
     if (this.countries.length === 0) {
       this.countries = await this.getCountriesData();
     }
+
     const countryArr = this.getRandomSubset(this.countries, 4);
-    const ansIndex = this.getRandomInt(0, 4);
+    const answerIndex = this.getRandomInt(0, 4);
     const question = this.getRandomInt(0, 10) % 2 === 0
-                     ? this.prepareCapitalQuestion(countryArr, ansIndex)
-                     : this.prepareFlagQuestion(countryArr, ansIndex);
+                     ? this.setCapitalQuestion(countryArr, answerIndex)
+                     : this.setFlagQuestion(countryArr, answerIndex);
+
     return question;
   }
 
   getRandomSubset(countries: Country[], count: number): Country[] {
     const countryArr: Country[] = [];
+
     while (countryArr.length < count) {
       const i = this.getRandomInt(0, countries.length);
       const country = countries[i];
@@ -38,6 +41,7 @@ export class QuestionService {
         countryArr.push(country);
       }
     }
+
     return countryArr;
   }
 
@@ -45,30 +49,33 @@ export class QuestionService {
     return Math.floor(Math.random() * max) + min;
   }
 
-  prepareCapitalQuestion(countryArr: any[], answerIndex: number): Question {
+  setCapitalQuestion(countryArr: any[], answerIndex: number): Question {
     const question: Question = {
       flag: '',
       text: `${countryArr[answerIndex].capital} is the capital of`,
       options: [] as any[],
       answer: answerIndex
     };
+
     countryArr.forEach(country => {
       question.options.push(country.name);
     });
+
     return question;
   }
 
-  prepareFlagQuestion(countryArr: any[], answerIndex: number): Question {
-    console.log(countryArr);
+  setFlagQuestion(countryArr: any[], answerIndex: number): Question {
     const question: Question = {
       flag: countryArr[answerIndex].flag,
-      text: 'Which country does this flag belong to?',
+      text: `Which country does this flag belong to?`,
       options: [] as any[],
       answer: answerIndex
     };
+
     countryArr.forEach(country => {
       question.options.push(country.name);
     });
+
     return question;
   }
 }

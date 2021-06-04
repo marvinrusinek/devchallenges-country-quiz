@@ -10,6 +10,7 @@ import { QuizSelectionComponent } from './country-quiz/containers/quiz-selection
 import { QuizComponent } from './country-quiz/containers/quiz/quiz.component';
 import { ResultsComponent } from './country-quiz/containers/results/results.component';
 import { FooterComponent } from './country-quiz/containers/footer/footer.component';
+import {MatRadioModule} from "@angular/material/radio";
 
 const routes: Routes = [
   {

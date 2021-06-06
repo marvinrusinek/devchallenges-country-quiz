@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 
-import { AppComponent } from './app.component';
+import { CountryQuizComponent } from './country-quiz.component';
 import { QuizSelectionComponent } from './country-quiz/containers/quiz-selection/quiz-selection.component';
 import { QuizComponent } from './country-quiz/containers/quiz/quiz.component';
 import { ResultsComponent } from './country-quiz/containers/results/results.component';
@@ -27,7 +27,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
+    CountryQuizComponent,
     QuizSelectionComponent,
     QuizComponent,
     ResultsComponent,
@@ -40,6 +40,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [CountryQuizComponent]
 })
-export class AppModule { }
+export class CountryQuizModule { }

@@ -10,7 +10,7 @@ import { QuestionService } from '../../shared/services/question.service';
 })
 export class QuizComponent implements OnInit {
   @Output() quizCompleted = new EventEmitter<number>();
-  letters: string[] = ['A', 'B', 'C', 'D'];
+  letters: string[] = ['a', 'b', 'c', 'd'];
   question!: Question;
   selectedOption: number | null = null;
   totalQuestions!: number;
@@ -20,7 +20,7 @@ export class QuizComponent implements OnInit {
   constructor(private questionService: QuestionService) { }
 
   ngOnInit(): void {
-    this.totalQuestions = 5;
+    this.totalQuestions = 10;
     this.currentQuestionNumber = 0;
     this.correctAnswerCount = 0;
     this.getQuestion();

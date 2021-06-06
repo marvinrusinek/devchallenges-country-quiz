@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 import { Country } from '../models/country.model';
 import { Question } from '../models/question.model';
@@ -12,23 +12,21 @@ export class QuestionService {
 
   constructor(private http: HttpClient) {}
 
-  getCountriesData(): Promise<any> {
+  getCountries(): Promise<any> {
     const url = 'https://restcountries.eu/rest/v2/all';
     return this.http.get(url).toPromise();
   }
 
   async getQuestion(): Promise<Question> {
     if (this.countries.length === 0) {
-      this.countries = await this.getCountriesData();
+      this.countries = await this.getCountries();
     }
 
     const countryArr = this.getRandomSubset(this.countries, 4);
     const answerIndex = this.getRandomInt(0, 4);
-    const question = this.getRandomInt(0, 10) % 2 === 0
-                     ? this.setCapitalQuestion(countryArr, answerIndex)
-                     : this.setFlagQuestion(countryArr, answerIndex);
-
-    return question;
+    return this.getRandomInt(0, 10) % 2 === 0
+              ? this.setCapitalQuestion(countryArr, answerIndex)
+              : this.setFlagQuestion(countryArr, answerIndex);
   }
 
   getRandomSubset(countries: Country[], count: number): Country[] {

@@ -1,27 +1,52 @@
-# CountryQuiz2
+# Country Quiz app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+<h1 align="center">Country Quiz app</h1>
 
-## Development server
+<div align="center">
+   Solution for a challenge from <a href="http://devchallenges.io">devChallenges.io</a>.
+</div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<div align="center">
+  <h3>
+    <a href="https://devchallenges-country-quiz-silk.vercel.app">Demo</a>
+    <span> | </span>
+    <a href="https://www.github.com/marvinrusinek/devchallenges-country-quiz">Solution</a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8">Challenge</a>
+  </h3>
+</div>
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Overview
+  - Built With
+- Features
+- Contact
 
-## Build
+<!-- OVERVIEW -->
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Overview
 
-## Running unit tests
+<b>Screenshot:</b> 
+<img src="http://www.marvinrusinek.com/portfolio-projects/devchallenges-country-quiz-app.png" align="center">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Live demo can be found here: https://devchallenges-country-quiz-silk.vercel.app
+- I used Angular 11, HTML5 and CSS3 to create the app.
 
-## Running end-to-end tests
+### Built With
+- Angular (https://www.angular.io/)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Features
+This webpage was created as a submission to a DevChallenges (https://www.devchallenges.io/challenges) challenge. The challenge (https://devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8) was to build a webpage that satisfies the following user stories:
 
-## Further help
+- <b>User story:</b> I can see at least 2 types of questions: a city is the capital of.. or a flag belong to country..
+- <b>User story:</b> I can see select an answer
+- <b>User story:</b> I can see if my answer is correct or incorrect
+- <b>User story:</b> When I answer correctly, I can move on to the next question
+- <b>User story:</b> When I answer incorrectly, I can see my results and try again
+- <b>User story:</b> I can try again
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contact
+- Website [marvinrusinek.com] (http://www.marvinrusinek.com)
+- GitHub [@marvinrusinek] (https://www.github.com/marvinrusinek)
+- Twitter [@marvinrusinek] (https://www.twitter.com/marvinrusinek)
